@@ -215,7 +215,7 @@ router.get('/work', function (req, res) {
     main: {
       works: [
         {
-          position: 'Junior Fullstack ',
+          position: 'Junior Fullstack Developer',
           company: {
             name: 'DCoast',
             url: null,
