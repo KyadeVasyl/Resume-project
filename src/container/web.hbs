@@ -1,0 +1,38 @@
+<div>
+    <main>
+        <section>
+            <div>
+                {{#with web}}
+                     <ul>   
+                        {{#each languages}}
+                            <li>
+                                <div><h1>{{name}}</h1></div>
+
+                                <br>
+
+                                <div><em>{{version}}</em></div>
+
+                                <br>
+
+                                <div><p>{{description}}</p></div>
+
+                                <br>
+
+                               {{>elements}}
+
+                                <br>
+
+                               {{>properties}}
+
+                               <br>
+
+                                {{>functions}}
+
+                            </li>
+                        {{/each}}           
+                    </ul>
+                 {{/with}}          
+            </div>          
+        </section>
+    </main>
+</div>

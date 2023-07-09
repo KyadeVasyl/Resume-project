@@ -1,0 +1,26 @@
+<div>
+
+    <br>
+
+    <ol>
+        {{#each elements}}
+            <li>
+                <div><strong>{{name}}</strong></div>
+                <div><i>{{description}}</i></div>
+
+                <br>
+
+                <div>
+                        {{>title data="Attributes"}}
+                        <br>
+                    {{#each attributes}}
+                        <div><mark>{{name}}</mark></div>
+                        <div><small>{{description}}</small></div>
+                        <br>
+                    {{/each}}
+                </div>
+                <hr>
+            </li>
+        {{/each}}
+    </ol>
+</div>
