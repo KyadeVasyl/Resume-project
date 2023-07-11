@@ -1,0 +1,166 @@
+<div>
+    <main>
+        <section>
+            <div><h1><span class="badge text-bg-primary">{{name}}</span></h1></div>
+            <div>{{description}}</div>
+            <div>{{price}}</div>
+            <div>{{category}}</div>
+
+            <br>
+
+            <div>
+                <h2><span class="badge text-bg-primary">Features:</span></h2>
+                <br>
+                {{#with features}}
+                    <div>
+                        <h3><span class="badge text-bg-primary">Processor:</span></h3>
+                        <br>
+                        {{#with processor}}
+                            <div>{{brand}}</div>
+                            <div>{{model}}</div>
+                            <div>{{speed}}</div>
+                            <div>{{cores}}</div>
+                            <div>{{cache}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Memory:</span></h3>
+                        <br>
+                        {{#with memory}}
+                            <div>{{type}}</div>
+                            <div>{{size}}</div>
+                            <div>{{speed}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Storage:</span></h3>
+                        <br>
+                        {{#with storage}}
+                            <div>{{type}}</div>
+                            <div>{{size}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Display:</span></h3>
+                        <br>
+                        {{#with display}}
+                            <div>{{size}}</div>
+                            <div>{{resolution}}</div>
+                            <div>{{technology}}</div>
+                            <div>{{color_space}}</div>
+                            <div>{{brightness}}</div>
+                            <div>{{refresh_rate}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Graphics:</span></h3>
+                        <br>
+                        {{#with graphics}}
+                            <div>{{brand}}</div>
+                            <div>{{model}}</div>
+                            <div>{{memory}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Ports:</span></h3>
+                        <br>
+                        <ol>
+                            {{#each ports}}
+                                <li>
+                                    <div>{{type}}</div>
+                                    <div>{{count}}</div>
+                                    <div>
+                                        <h4><span class="badge text-bg-primary">Features:</span></h4>
+                                        <br>
+                                        <ul>
+                                            {{#each features}}
+                                               <li>{{this}}</li> 
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </li>
+                            {{/each}}
+                        </ol>
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Battery:</span></h3>
+                        <br>
+                        {{#with battery}}
+                            <div>{{type}}</div>
+                            <div>{{capacity}}</div>
+                            <div>{{life}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Weight:</span></h3>
+                        <br>
+                        <div>{{weight}}</div>
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Dimensions:</span></h3>
+                        <br>
+                        {{#with dimensions}}
+                            <div>{{height}}</div>
+                            <div>{{width}}</div>
+                            <div>{{depth}}</div>
+                        {{/with}}
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Operating system:</span></h3>
+                        <br>
+                        <div>{{operating_system}}</div>
+                    </div>
+
+                    <br>
+                    <hr>
+
+                    <div>
+                        <h3><span class="badge text-bg-primary">Accessories:</span></h3>
+                        <br>
+                        {{#each accessories}}
+                            <div>{{name}}</div>
+                            <div>{{price}}</div>
+                            <br>
+                        {{/each}}
+                    </div>
+                {{/with}}
+            </div>
+        </section>
+    </main>
+</div>
