@@ -1,0 +1,99 @@
+<div>
+    <main>
+        <section>
+            <div>
+                <h1>{{name}}</h1>
+            </div>
+            <div><i><span class="badge text-bg-primary">{{description}}</span></i></div>
+
+            <br>
+
+            <div>
+                {{#with history}}
+                    <div><b>{{year}}</b></div>
+                    <div><strong><span class="badge text-bg-primary">{{founder}}</span></strong></div>
+                {{/with}}
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Types:</span></div>
+                <br>
+                <ol>
+                    {{#each types}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Syntax:</span></div>
+                <br>
+                <ul>
+                 {{#with syntax}}
+                
+                    <li>{{variables}}</li>
+                    <li>{{functions}}</li>
+                    <li>{{conditionals}}</li>
+                    <li>{{loops}}</li>
+                    <li>{{classes}}</li>
+                 {{/with}}
+                </ul>
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Features:</span></div>
+                <br>
+                 <ol>
+                    {{#each features}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Libraries:</span></div>
+                <br>
+                 <ol>
+                    {{#each libraries}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Tools:</span></div>
+                <br>
+                 <ol>
+                    {{#each tools}}
+                        <li>{{this}}</li>
+                    {{/each}}
+                </ol>
+            </div>
+
+            <br>
+
+            <div>
+                <div><span class="badge text-bg-primary">Community:</span></div>
+                <br>
+                <ul>
+                 {{#each community}}
+                   <li>
+                    <div><b><span class="badge text-bg-info">{{name}}</span></b></div>
+                    <div><b><span class="badge text-bg-secondary">{{type}}</span></b></div>
+                   </li>
+                 {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
