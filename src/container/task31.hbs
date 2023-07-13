@@ -1,0 +1,62 @@
+<div>
+    <div class="row">
+        <header class="col-12">
+                <nav>
+                    {{#with navigation}}
+                        <div>
+                            {{#each links}}
+                                <a href="{{href}}" class="btn btn-link">{{text}}</a>
+                            {{/each}}
+
+                            {{#with button}}
+                                <a  href="{{href}}"  class="btn btn-primary">{{text}}</a>
+                            {{/with}}
+                        </div>
+                    {{/with}}
+                </nav>
+                
+                <hr>
+
+                <div>
+                    {{#with header}}
+                        <h1>{{title}}</h1>
+                        <p>{{description}}</p>
+                        
+                        {{#with button}}
+                            <a href="{{link}}" class="btn btn-primary">{{text}}</a>
+                        {{/with}}
+                    {{/with}}
+                </div>
+        </header>
+   </div>
+
+    <hr>
+
+   <main>
+        <div class="row gx-2 gy-1">
+            {{#with city}}
+                <h2>{{title}}</h2>
+
+                <br>
+                    {{#each cards}}
+                        <div class="card col-5">
+                            {{#with picture}}
+                                <img class="card-img-top" src="{{src}}" alt="{{alt}}">
+                            {{/with}}
+                            <div class="card-body">
+                                <div class="card-title">{{title}}</div>
+                                <p>{{description}}</p>
+                                {{#with button}}
+                                    <a href="{{href}}" class="btn btn-primary">{{text}}</a>
+                                {{/with}}
+                            </div>
+                        </div>
+                    {{/each}}
+            {{/with}}
+        </div>
+   </main>
+
+   <footer>
+
+   </footer>
+</div>
