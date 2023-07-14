@@ -870,7 +870,7 @@ router.get('/task31', function (req, res) {
     },
     proposition: {
       title: 'Proposition',
-      card: [
+      cards: [
         {
           header: 'Our Approach',
           title: 'Innovative Solutions for Your Business',
