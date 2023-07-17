@@ -360,6 +360,23 @@
 </main>
 
  
+        <hr class="mt-5 mb-5">
 
-    <footer></footer>
+
+    <footer>
+        <div class="nav">
+            {{#each footer}}
+                <div class="nav-item col-2">
+                    {{#each this}}
+                        {{#if @last}}  <a href="{{link}}" class="nav-link disabled">{{text}}</a> 
+                        
+                        {{else}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a> 
+                        {{/if}}
+
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
+    </footer>
 </div>
