@@ -116,15 +116,19 @@
 
 
     <footer>
-        {{#each footer}}
-            <div class="nav">
-                {{#each .}}
-                    <div class="nav-item col-3">
-                        <a href="{{link}}" class="nav-link">{{text}}</a>
-{{!-- Не знаю як відобразити останній рядок disabled і чи взагалі правильно цей футер я зробив, поясніть будь-ласка :) --}}
-                    </div>
-                {{/each}}
-            </div>
-        {{/each}}
+        <div class="nav">
+            {{#each footer}}
+                <div class="nav-item col-2">
+                    {{#each this}}
+                        {{#if @last}}  <a href="{{link}}" class="nav-link disabled">{{text}}</a> 
+                        
+                        {{else}}
+                        <a href="{{link}}" class="nav-link">{{text}}</a> 
+                        {{/if}}
+
+                    {{/each}}
+                </div>
+            {{/each}}
+        </div>
     </footer>
 </div>
