@@ -313,6 +313,27 @@
                         </div>
                     {{/with}}
                 </div>
+
+                <div class="mt-3">
+                    {{#with your_expirience}}
+                        <div class="mb-3">
+                            <label class="form-label">{{label}}</label>
+                            <input class="form-control">
+                        </div>
+                    {{/with}}
+
+                     <div>
+                        {{#with purchase_frequency}}
+                            <label class="form-label">{{label}}</label>
+                            <select placeholder="{{placeholder}}" class="form-select">
+                                    <option selected>{{placeholder}}</option>
+                                {{#each options}}
+                                    <option value="{{value}}">{{text}}</option>
+                                {{/each}}
+                            </select>
+                        {{/with}}
+                    </div>
+                </div>
             {{/with}}
         </section>
        
