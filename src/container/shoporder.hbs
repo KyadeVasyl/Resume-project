@@ -29,28 +29,29 @@
                         {{#with form}}
                             <div class="row">
                                 {{#with input}}
-                                    <div class="col-6">
+                                    <div class="col">
                                         {{#with surname}}
                                               <label class="form-label mb-0">{{label}}</label>
                                               <input class="form-control" placeholder="{{placeholder}}">
                                               <div class="form-text text-dark mt-0">{{caption}}</div>
                                         {{/with}}
                                     </div>
-                                    <div class="col-6">
+                                    <div class="col">
                                         {{#with name}}
                                               <label class="form-label mb-0">{{label}}</label>
                                               <input class="form-control" placeholder="{{placeholder}}">
                                               <div class="form-text text-dark mt-0">{{caption}}</div>
                                         {{/with}}
                                     </div>
-                                    <div class="col-6 mt-2">
+                                    <div></div>
+                                    <div class="col mt-2">
                                         {{#with phone}}
                                               <label class="form-label mb-0">{{label}}</label>
                                               <input class="form-control" placeholder="{{placeholder}}">
                                               <div class="form-text text-dark mt-0">{{caption}}</div>
                                         {{/with}}
                                     </div>
-                                    <div class="col-6 mt-2">
+                                    <div class="col mt-2">
                                         {{#with email}}
                                               <label class="form-label mb-0">{{label}}</label>
                                               <input class="form-control" placeholder="{{placeholder}}">
@@ -63,11 +64,12 @@
 
                                 <div>
                                     {{#each switch}}      
-                                        <div class="form-check  form-switch {{#if isActive}}  {{else}} {{/if}} form-select-lg">
+                                        <div class="form-check  form-switch form-select-lg">
                                             <label class="form-check-label">{{text}}</label>
-                                            <input  name="знижки"  type="checkbox" class="form-check-input">
+                                            <input  name="знижки"  type="checkbox" class="form-check-input" {{#if isActive}} checked {{else}} {{/if}}>
                                         </div>
                                     {{/each}}
+                                    
                                 </div>
                             </div>
                         {{/with}}
@@ -176,7 +178,7 @@
                                 {{#each list}}
                                 <div class="form-check"> 
                                     <label class="form-check-label">{{type}}</label>
-                                    <input type="radio" class="form-check-input">
+                                    <input type="radio" name="payment" class="form-check-input">
                                     <br>
                                     <small class="pt-5">{{description}}</small>
                                 </div>
@@ -299,14 +301,14 @@
 
         <section>
             {{#with quiz}}
-                <div>
+                <div class="row">
                     <h4 class="mb-4">{{title}}</h4>
                     {{#with preference}}
-                        <div class="form-check">
-                            <label class="form-check-label">{{title}}</label>
+                        <h5>{{title}}</h5>
+                        <div class=" col-1 form-check">
                             <input  type="radio" class="form-check-input">
                             {{#each options}}
-                                <option>{{this}}</option>
+                                <label class="form-check-label">{{this}}</label>
                             {{/each}}
                         </div>
                     {{/with}}
