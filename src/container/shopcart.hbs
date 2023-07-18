@@ -31,25 +31,26 @@
 
     <main>
             {{#each goodsBlock}}
-                <div class="card">
+                <div class="card m-2">
                     <div class="row">
-                        <img src="{{image}}" class="col-2 card-img-top" alt="photo">
-                        <div class="col">
-                            <div class="col-2 card-title mb-1">{{name}}</div>
-                            <div class="col-4 mb-1">{{description}}</div>
+                        <div class="col-2"><img src="{{image}}" class="col-2 pt-3 mt-5 card-img-top" alt="photo"></div>
+                            <div class="col-4 card-title">
+                                    <h2>{{name}}</h2>
+                                    {{description}}
+                            </div>
             
-                            <div class="col-1 mb-1">
+                            <div class="col-2  pt-3 mt-5">
                                 {{#with price}}
                                     <div>{{title}}</div>
                                     <div>{{value}}</div>
                                 {{/with}}
                             </div>
 
-                            <div class="col-1 mb-1">{{amount}}</div>
-                            
+                            <div class="col-1 pt-3 mt-5">{{amount}}</div>
+                           
                             <div class="col-2">
                                 {{#each buttons}}
-                                    <button class="btn {{#if isPrimary}} btn-primary mb-1 {{/if}}
+                                    <button class="btn {{#if isPrimary}} btn-primary mt-5 mb-1{{/if}}
                                         {{#if isDanger}} btn-danger {{/if}}">
 
                                         {{text}}
@@ -57,7 +58,6 @@
                                     </button>
                                 {{/each}}
                             </div>
-                        </div>
                     </div>
                 </div>
             {{/each}}
