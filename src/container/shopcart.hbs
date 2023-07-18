@@ -33,22 +33,23 @@
             {{#each goodsBlock}}
                 <div class="card">
                     <div class="row">
-                        <img src="" class=" col-1 card-img-top" alt="photo">
-                        <div class="card-body">
-                            <div class="col-5">
-                                <div class="card-title">{{name}}</div>
-                                <p>{{description}}</p>
-                            </div>
-                            <div class="col-2">
+                        <img src="{{image}}" class="col-2 card-img-top" alt="photo">
+                        <div class="col">
+                            <div class="col-2 card-title mb-1">{{name}}</div>
+                            <div class="col-4 mb-1">{{description}}</div>
+            
+                            <div class="col-1 mb-1">
                                 {{#with price}}
                                     <div>{{title}}</div>
                                     <div>{{value}}</div>
                                 {{/with}}
-                                <div>{{amount}}</div>
                             </div>
-                            <div  class="col-4">
+
+                            <div class="col-1 mb-1">{{amount}}</div>
+                            
+                            <div class="col-2">
                                 {{#each buttons}}
-                                    <button class="btn {{#if isPrimary}} btn-primary {{/if}}
+                                    <button class="btn {{#if isPrimary}} btn-primary mb-1 {{/if}}
                                         {{#if isDanger}} btn-danger {{/if}}">
 
                                         {{text}}
@@ -90,7 +91,7 @@
                     <div class="display-6 text-center mb-3">{{title}}</div>
                     {{#each cards}}
                         <div class="card col-4">
-                            <img src="" class="card-img-top"  alt="product_photo">
+                            <img src="{{image}}" class="card-img-top"  alt="product_photo">
                             <div class="card-body">
                                 <div class="card-title mb-2">
                                     {{title}}

@@ -1052,7 +1052,7 @@ router.get('/shopcart', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopcart', {
-    layout: 'basic',
+    layout: 'shop',
     navigation: {
       links: [
         {
@@ -1080,7 +1080,7 @@ router.get('/shopcart', function (req, res) {
 
     goodsBlock: [
       {
-        image: 'https://picsum.photos/50/50',
+        image: 'https://picsum.photos/110/110',
         name: 'Samsung Galaxy S21 Ultra ',
         description:
           'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
@@ -1092,7 +1092,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/10/10',
+        image: 'https://picsum.photos/110/110',
         name: 'Ноутбук Dell XPS 13',
         description:
           'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
@@ -1105,7 +1105,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/10/10',
+        image: 'https://picsum.photos/110/110',
         name: 'Телевізор LG OLED CX',
         description:
           'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
@@ -1118,7 +1118,7 @@ router.get('/shopcart', function (req, res) {
         ],
       },
       {
-        image: 'https://picsum.photos/10/10',
+        image: 'https://picsum.photos/110/110',
         name: 'Навушники Sony WH-1000XM4',
         description:
           'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
@@ -1143,7 +1143,7 @@ router.get('/shopcart', function (req, res) {
           isSuccess: true,
         },
         {
-          text: 'Оформити кредит',
+          text: 'Офрмити кредит',
           link: 'https://www.youtube.com/',
           isOutline: true,
         },
@@ -1159,7 +1159,7 @@ router.get('/shopcart', function (req, res) {
           description:
             'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
           isHot: false,
-          isNew: false,
+          idNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -1167,7 +1167,7 @@ router.get('/shopcart', function (req, res) {
           description:
             "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
           isHot: true,
-          isNew: false,
+          idNew: false,
         },
         {
           image: 'https://picsum.photos/400/200',
@@ -1175,7 +1175,7 @@ router.get('/shopcart', function (req, res) {
           description:
             "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
           isHot: false,
-          isNew: true,
+          idNew: false,
         },
       ],
     },
@@ -1291,7 +1291,6 @@ router.get('/shopcart', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-
 // ================================================================
 // Підключаємо роутер до бек-енду
 module.exports = router
