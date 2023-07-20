@@ -1,0 +1,16 @@
+<div class="m-3 mt-5">
+    <main>
+        <div>
+            {{#with page_list}}
+                <h1 class="mb-4">{{title}}</h1>
+                <p class="mb-5">{{text}}</p>
+
+                <div class="row col-3">
+                    {{#each buttons}}
+                        <a href="{{link}}" class="btn btn-primary mb-3">{{text}}</a>
+                    {{/each}}
+                </div>
+            {{/with}}
+        </div>
+    </main>
+</div>

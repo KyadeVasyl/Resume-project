@@ -42,7 +42,25 @@ router.get('/', function (req, res) {
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('index', {
-    layout: 'default',
+    layout: 'index',
+    firstName: 'Vasyl',
+    secondName: 'Deiak',
+    projectName: 'Resume project',
+
+    page_list: {
+      title: 'Список сторінок',
+      text: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
+      buttons: [
+        {text:'Skills', link: '/skills'},
+        {text:'Summary', link: '/summary'},
+        {text:'Person', link: '/person'},
+        {text:'Bio', link: '/bio'},
+        {text:'education', link: '/education'},
+        {text:'work', link: '/work'},
+        {text:'program', link: '/program'},
+        {text:'web', link: '/web'},
+      ],
+    }
   })
  
   //                  ↑↑ сюди вводимо JSON дані
