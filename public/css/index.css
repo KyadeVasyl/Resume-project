@@ -1,4 +1,24 @@
-html {
-  max-width: 720px;
+
+:root {
+  background-color:
 }
 
+
+html {
+  max-width: 720px;
+  background-color: 
+}
+
+
+
+
+#user,
+h1,
+h2,
+button {
+  color: brown;
+}
+
+  main div div em {
+  color: green;
+}

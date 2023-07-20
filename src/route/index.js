@@ -48,6 +48,17 @@ router.get('/', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
+router.get('/selector', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('selector', {
+    layout: 'default',
+  })
+ 
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
 // ================================================================
 
 //              ↙ тут вводимо шлях (PATH) до сторінки
