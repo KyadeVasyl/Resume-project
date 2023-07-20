@@ -1,0 +1,112 @@
+<div>
+    <main>
+        <section>
+            <div><h1><span class="badge text-bg-primary">{{name}}</span></h1></div>
+            <br>
+            <div>
+                <ul>
+                    {{#each users}}
+                        <li>
+                            {{> person-profile }}
+
+                            <br>
+                            <hr>
+
+                            <div>
+                                <em><span class="badge text-bg-primary">Friends:</span></em>
+
+                                <br>
+
+                                {{#each friends}}
+
+                                    {{> person-profile }}
+                                    <br>
+                                    <div>
+                                        <em><span class="badge text-bg-primary">Mutual friends:</span></em>
+                                        <br>
+                                        {{#each mutual_friends}}
+                                            {{> person-profile }}
+                                        {{/each}}
+                                    </div>
+                                {{/each}}
+                            </div>
+                            
+
+                            <div>
+                                {{#if groups}} <div><h3><span class="badge text-bg-primary">Groups:</span></h3></div> {{else}} {{/if}}
+                                <br>
+                                <div>
+                                    <ol>
+                                        {{#each groups}}
+                                        <li>
+                                        <div>Id:{{id}}</div>
+
+                                        <br>
+
+                                        <div><h4>{{name}}</h4></div> 
+
+                                            <br>
+
+                                            <div>{{description}}</div>
+
+                                            <br>
+
+                                            <div>
+                                                {{#each members}}
+                                                    {{> person-profile }}
+                                                {{/each}}
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </ol>
+                                </div>
+                            </div>
+
+                            <br>
+
+                            <div>
+                             {{#each friends}}
+
+                                {{#each mutual_friends}}
+                                    {{#each mutual_friends}}
+                                        {{> person-profile }}
+                                    {{/each}}
+                                {{/each}}
+                                <br>
+                                {{#if groups}} <div><h3><span class="badge text-bg-primary">Groups:</span></h3></div> {{else}} {{/if}}
+                                <br>
+                                <div>
+                                    <ol>
+                                        {{#each groups}}
+                                        <li>
+                                        <div>Id:{{id}}</div>
+
+                                        <br>
+
+                                        <div><h4>{{name}}</h4></div> 
+
+                                            <br>
+
+                                            <div>{{description}}</div>
+
+                                            <br>
+
+                                            <div>
+                                                {{#each members}}
+                                                    {{> person-profile }}
+                                                {{/each}}
+                                            </div>
+                                        </li>
+                                        {{/each}}
+                                    </ol>
+                                </div>
+                             {{/each}}
+                            </div>
+                             
+                        </li>
+                    {{/each}}
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
