@@ -60,7 +60,13 @@ router.get('/', function (req, res) {
         {text:'program', link: '/program'},
         {text:'web', link: '/web'},
         {text:'shoporder', link: '/shoporder'},
-        {text:'web', link: '/web'},
+        {text:'shopreview', link: '/shopreview'},
+        {text:'shopcart', link: '/shopcart'},
+        {text:'shophome', link: '/shophome'},
+        {text:'task31', link: '/task31'},
+        {text:'task22', link: '/task22'},
+        {text:'task21', link: '/task21'},
+        {text:'facebook', link: '/facebook'},
       ],
     }
   })
@@ -394,7 +400,6 @@ router.get('/work', function (req, res) {
   })
 })
 
-
 router.get('/bio', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
   res.render('bio', {
@@ -492,9 +497,6 @@ router.get('/bio', function (req, res) {
     },
   })
 })
-
-
-// ================================================================
 
 router.get('/program', function (req, res) {
   //             ↙ cюди вводимо назву файлу з сontainer
@@ -715,9 +717,7 @@ router.get('/web', function (req, res) {
 })
 
 router.get('/facebook', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
+  
   res.render('facebook', {
     layout: 'basic',
     page: {
@@ -873,22 +873,9 @@ router.get('/facebook', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
-router.get('/bootstrap', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('bootstrap', {
-    layout: 'basic',
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
-
 
 router.get('/task21', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
+  
   res.render('task21', {
     layout: 'basic',
     heading: {
@@ -947,7 +934,12 @@ router.get('/task21', function (req, res) {
         {
           text: 'Bootstrap',
           url: 'https://getbootstrap.com/',
-
+        },
+      ],
+    },
+  })
+ 
+})
 
 router.get('/task22', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1003,6 +995,9 @@ router.get('/task22', function (req, res) {
         },
       },
     },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
 
 router.get('/task31', function (req, res) {
   // res.render генерує нам HTML сторінку
@@ -1010,22 +1005,6 @@ router.get('/task31', function (req, res) {
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('task31', {
     layout: 'basic',
-
-router.get('/shophome', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shophome', {
-    layout: 'basic',
-    
-router.get('/shoporder', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shoporder', {
-    layout: 'shop',
-
-
     navigation: {
       links: [
         {
@@ -1040,7 +1019,6 @@ router.get('/shoporder', function (req, res) {
           text: 'Help',
           href: 'https://www.youtube.com/',
         },
-
       ],
       button: {
         text: 'Lets start',
@@ -1135,7 +1113,163 @@ router.get('/shoporder', function (req, res) {
             name: 'Katherine',
             surname: 'Johnson',
             nickname: 'The Human Computer',
-
+          },
+        ],
+      },
+    },
+    gallery: {
+      title: 'Picture history',
+      cards: [
+        {
+          name: 'The Mona Lisa',
+          items: [
+            'Painting',
+            'Oil on poplar panel',
+            '1503-1519',
+          ],
+        },
+        {
+          name: 'The Persistence of Memory',
+          items: ['Painting', 'Oil on canvas', '1931'],
+        },
+        {
+          name: 'The Starry Night',
+          items: ['Painting', 'Oil on canvas', '1889'],
+        },
+      ],
+    },
+    relaxion: {
+      title: 'Relax',
+      cards: [
+        {
+          header: 'Meditation',
+          title: 'The Benefits of Meditation',
+          description:
+            'Meditation can help reduce stress, anxiety, and depression, and improve overall well-being. Studies have also shown that regular meditation practice can enhance cognitive function and even boost the immune system.',
+        },
+        {
+          header: 'Hydration',
+          title: 'The Importance of Hydration',
+          description:
+            'Drinking enough water is essential for good health. Dehydration can lead to a range of symptoms, including fatigue, headaches, and constipation. It can also increase the risk of kidney stones and other health problems.',
+        },
+        {
+          header: 'Yoga',
+          title: 'The Benefits of Yoga',
+          description:
+            'Yoga can improve flexibility, strength, and balance, and help reduce stress and anxiety. It has also been shown to improve heart health and promote a sense of well-being.',
+        },
+        {
+          header: 'Sunscreen',
+          title: 'The Importance of Sunscreen',
+          description:
+            "Protecting your skin from the sun's harmful rays is crucial for reducing the risk of skin cancer and premature aging. Experts recommend using a broad-spectrum sunscreen with an SPF of at least 30 and reapplying every two hours.",
+        },
+      ],
+    },
+    rest: {
+      cards: [
+        {
+          header: 'Cooking',
+          title: 'The Joy of Cooking',
+          description:
+            'Cooking is a creative outlet that can bring people together over delicious food.',
+          button: 'Learn More',
+          footer: 'Photo by Brooke Lark on Unsplash',
+        },
+        {
+          header: 'Travel',
+          title: 'The Benefits of Traveling',
+          description:
+            'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
+          button: 'Explore',
+          footer: 'Photo by Sime Basioli on Unsplash',
+        },
+      ],
+    },
+    proposition: {
+      title: 'Proposition',
+      card: [
+        {
+          header: 'Our Approach',
+          title: 'Innovative Solutions for Your Business',
+          description:
+            'We create effective solutions that cater to your business needs.',
+        },
+        {
+          header: 'Our Expertise',
+          title: 'Trusted and Experienced Professionals',
+          description:
+            'Our team of experts delivers tailored strategies for best results.',
+        },
+      ],
+    },
+    footer: {
+      title: 'Navigation',
+      navigation: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+      socialMedia: [
+        {
+          name: 'Facebook',
+          link: 'https://www.facebook.com/',
+        },
+        {
+          name: 'Twitter',
+          link: 'https://twitter.com/',
+        },
+        {
+          name: 'Instagram',
+          link: 'https://www.instagram.com/',
+        },
+      ],
+      partners: [
+        {
+          name: 'Acme Inc.',
+          link: 'https://www.acme.com/',
+        },
+        {
+          name: 'Globex Corporation',
+          link: 'https://www.globex.com/',
+        },
+        {
+          name: 'Stark Industries',
+          link: 'https://www.starkindustries.com/',
+        },
+      ],
+    },
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+router.get('/shophome', function (req, res) {
+  
+  res.render('shophome', {
+    layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
       ],
     },
 
@@ -1201,14 +1335,9 @@ router.get('/shoporder', function (req, res) {
             'Amazon announces an expansion of its grocery delivery service, with plans to offer free delivery to Prime members on orders over $35 and to expand its selection of fresh and organic produce.',
           isTop: false,
           isNew: true,
-
-        {
-          text: 'Exit',
-          href: null,
         },
       ],
     },
-
 
     goodsBlock: {
       tabs: [
@@ -1311,6 +1440,129 @@ router.get('/shoporder', function (req, res) {
       ],
     },
 
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+
+})
+    
+router.get('/shoporder', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shoporder', {
+    layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Exit',
+          href: null,
+        },
+      ],
+    },
+
     header: 'Оформлення замовлення',
     contacts_data: {
       title: 'Контактні дані',
@@ -1356,103 +1608,10 @@ router.get('/shoporder', function (req, res) {
           {
             text: 'Отримувати інформацію про знижки',
             isActive: true,
-
           },
         ],
       },
     },
-
-    gallery: {
-      title: 'Picture history',
-      cards: [
-        {
-          name: 'The Mona Lisa',
-          items: [
-            'Painting',
-            'Oil on poplar panel',
-            '1503-1519',
-          ],
-        },
-        {
-          name: 'The Persistence of Memory',
-          items: ['Painting', 'Oil on canvas', '1931'],
-        },
-        {
-          name: 'The Starry Night',
-          items: ['Painting', 'Oil on canvas', '1889'],
-        },
-      ],
-    },
-    relaxion: {
-      title: 'Relax',
-      cards: [
-        {
-          header: 'Meditation',
-          title: 'The Benefits of Meditation',
-          description:
-            'Meditation can help reduce stress, anxiety, and depression, and improve overall well-being. Studies have also shown that regular meditation practice can enhance cognitive function and even boost the immune system.',
-        },
-        {
-          header: 'Hydration',
-          title: 'The Importance of Hydration',
-          description:
-            'Drinking enough water is essential for good health. Dehydration can lead to a range of symptoms, including fatigue, headaches, and constipation. It can also increase the risk of kidney stones and other health problems.',
-        },
-        {
-          header: 'Yoga',
-          title: 'The Benefits of Yoga',
-          description:
-            'Yoga can improve flexibility, strength, and balance, and help reduce stress and anxiety. It has also been shown to improve heart health and promote a sense of well-being.',
-        },
-        {
-          header: 'Sunscreen',
-          title: 'The Importance of Sunscreen',
-          description:
-            "Protecting your skin from the sun's harmful rays is crucial for reducing the risk of skin cancer and premature aging. Experts recommend using a broad-spectrum sunscreen with an SPF of at least 30 and reapplying every two hours.",
-        },
-      ],
-    },
-    rest: {
-      cards: [
-        {
-          header: 'Cooking',
-          title: 'The Joy of Cooking',
-          description:
-            'Cooking is a creative outlet that can bring people together over delicious food.',
-          button: 'Learn More',
-          footer: 'Photo by Brooke Lark on Unsplash',
-        },
-        {
-          header: 'Travel',
-          title: 'The Benefits of Traveling',
-          description:
-            'Traveling broadens your perspective, provides new experiences, and creates lasting memories.',
-          button: 'Explore',
-          footer: 'Photo by Sime Basioli on Unsplash',
-        },
-      ],
-    },
-    proposition: {
-      title: 'Proposition',
-      cards: [
-        {
-          header: 'Our Approach',
-          title: 'Innovative Solutions for Your Business',
-          description:
-            'We create effective solutions that cater to your business needs.',
-        },
-        {
-          header: 'Our Expertise',
-          title: 'Trusted and Experienced Professionals',
-          description:
-            'Our team of experts delivers tailored strategies for best results.',
-        },
-      ],
-    },
-    footer: {
-      title: 'Navigation',
-      navigation: [
-
     action_block: [
       { text: 'Швидке замовлення', isSuccess: true },
       { text: 'Видалити', isDanger: true },
@@ -1645,6 +1804,250 @@ router.get('/shoporder', function (req, res) {
         ],
       },
     },
+    footer: [
+      [
+        {
+          text: 'Home',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Trending',
+          link: 'https://www.youtube.com/feed/trending',
+        },
+        {
+          text: 'Subscriptions',
+          link: 'https://www.youtube.com/feed/subscriptions',
+        },
+        {
+          text: 'Library',
+          link: 'https://www.youtube.com/feed/library',
+        },
+      ],
+      [
+        {
+          text: 'History',
+          link: 'https://www.youtube.com/feed/history',
+        },
+        {
+          text: 'Your Videos',
+          link: 'https://www.youtube.com/feed/my_videos',
+        },
+        {
+          text: 'Live',
+          link: 'https://www.youtube.com/live',
+        },
+        {
+          text: 'Settings',
+          link: 'https://www.youtube.com/account',
+        },
+      ],
+      [
+        {
+          text: 'Watch Later',
+          link: 'https://www.youtube.com/playlist?list=WL',
+        },
+        {
+          text: 'Liked Videos',
+          link: 'https://www.youtube.com/playlist?list=LL',
+        },
+        {
+          text: 'Music',
+          link: 'https://www.youtube.com/music',
+        },
+        {
+          text: 'Gaming',
+          link: 'https://www.youtube.com/gaming',
+        },
+      ],
+      [
+        {
+          text: 'Sports',
+          link: 'https://www.youtube.com/channel/UCo_q6aOlvPH7M-j_XGWVgXg',
+        },
+        {
+          text: 'News',
+          link: 'https://www.youtube.com/news',
+        },
+        {
+          text: 'Fashion & Beauty',
+          link: 'https://www.youtube.com/channel/UC1x8rV_f-2yPpzlN0JWZXIQ',
+        },
+        {
+          text: 'Learning',
+          link: 'https://www.youtube.com/learning',
+        },
+      ],
+      [
+        {
+          text: 'Report History',
+          link: 'https://www.youtube.com/feed/history/report_history',
+        },
+        {
+          text: 'Help',
+          link: 'https://support.google.com/youtube/?hl=en',
+        },
+        {
+          text: 'Send Feedback',
+          link: 'https://support.google.com/youtube/answer/4347644?hl=en',
+        },
+        {
+          text: 'About',
+          link: 'https://www.youtube.com/about/',
+        },
+      ],
+    ],
+  })
+  //                  ↑↑ сюди вводимо JSON дані
+})
+
+router.get('/shopcart', function (req, res) {
+  // res.render генерує нам HTML сторінку
+
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('shopcart', {
+    layout: 'shop',
+    navigation: {
+      links: [
+        {
+          text: 'Home',
+          href: 'https://github.com/',
+        },
+        {
+          text: 'Contacts',
+          href: 'https://www.google.com/',
+        },
+        {
+          text: 'Help',
+          href: 'https://www.youtube.com/',
+        },
+      ],
+    },
+
+    header: {
+      title: 'Кошик',
+      button: {
+        text: 'Продовжити покупки',
+        link: 'https://www.youtube.com/',
+      },
+    },
+
+    goodsBlock: [
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Samsung Galaxy S21 Ultra ',
+        description:
+          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Ноутбук Dell XPS 13',
+        description:
+          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Телевізор LG OLED CX',
+        description:
+          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+      {
+        image: 'https://picsum.photos/110/110',
+        name: 'Навушники Sony WH-1000XM4',
+        description:
+          'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
+        price: { title: 'Ціна', value: '25 000 ₴' },
+
+        amount: '1 шт.',
+        buttons: [
+          { text: 'Додати', isPrimary: true },
+          { text: 'Видалити', isDanger: true },
+        ],
+      },
+    ],
+
+    total: {
+      title: 'Сума замовлення',
+      amount: '75 000 ₴',
+      delivery: 'Без доставки',
+      buttons: [
+        {
+          text: 'Оформити замовлення',
+          link: 'https://www.youtube.com/',
+          isSuccess: true,
+        },
+        {
+          text: 'Офрмити кредит',
+          link: 'https://www.youtube.com/',
+          isOutline: true,
+        },
+      ],
+    },
+
+    goodsOtherBlock: {
+      title: 'See other products',
+      cards: [
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'iPhone 13',
+          description:
+            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
+          isHot: false,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'MacBook Pro',
+          description:
+            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
+          isHot: true,
+          idNew: false,
+        },
+        {
+          image: 'https://picsum.photos/400/200',
+          title: 'AirPods Pro',
+          description:
+            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
+          isHot: false,
+          idNew: false,
+        },
+      ],
+    },
+
+    subscribe: {
+      header: 'Unlock Premium Content',
+      description:
+        'Subscribe to access exclusive content and features.',
+      buttons: [
+        {
+          text: 'Register Now',
+          link: 'https://www.youtube.com/',
+        },
+        {
+          text: 'Buy Subscription',
+          link: 'https://www.youtube.com/',
+        },
+      ],
+    },
 
     footer: [
       [
@@ -1742,26 +2145,14 @@ router.get('/shoporder', function (req, res) {
   //                  ↑↑ сюди вводимо JSON дані
 })
 
-
-router.get('/shopcart', function (req, res) {
-  // res.render генерує нам HTML сторінку
-
-  //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('shopcart', {
-    layout: 'basic',
-    navigation: {
-      links: [
-
 router.get('/shopreview', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
   res.render('shopreview', {
-    layout: 'basic',
+    layout: 'shop',
     navigation: {
       links: [
-
-
         {
           text: 'Home',
           href: 'https://github.com/',
@@ -1775,165 +2166,6 @@ router.get('/shopreview', function (req, res) {
           href: 'https://www.youtube.com/',
         },
       ],
-
-    },
-
-    header: {
-      title: 'Кошик',
-      button: {
-        text: 'Продовжити покупки',
-        link: 'https://www.youtube.com/',
-      },
-    },
-
-    goodsBlock: [
-      {
-        image: 'https://picsum.photos/50/50',
-        name: 'Samsung Galaxy S21 Ultra ',
-        description:
-          'екран 6.8", процесор Exynos 2100/Snapdragon 888, 12 ГБ ОЗУ, камера 108 МП, акумулятор 5000 мАг',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-      {
-        image: 'https://picsum.photos/10/10',
-        name: 'Ноутбук Dell XPS 13',
-        description:
-          'екран 13.3", процесор Intel Core i7-1165G7, 16 ГБ ОЗУ, SSD на 512 ГБ, вага 1.2 кг.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-      {
-        image: 'https://picsum.photos/10/10',
-        name: 'Телевізор LG OLED CX',
-        description:
-          'екран 55", роздільна здатність 4K, Smart TV, HDR, звук Dolby Atmos, 4 HDMI порти, 3 USB порти.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-      {
-        image: 'https://picsum.photos/10/10',
-        name: 'Навушники Sony WH-1000XM4',
-        description:
-          'Bluetooth 5.0, активне шумозаглушення, 30 годин автономної роботи, сенсорне управління, вага 254 г.',
-        price: { title: 'Ціна', value: '25 000 ₴' },
-
-        amount: '1 шт.',
-        buttons: [
-          { text: 'Додати', isPrimary: true },
-          { text: 'Видалити', isDanger: true },
-        ],
-      },
-    ],
-
-    total: {
-      title: 'Сума замовлення',
-      amount: '75 000 ₴',
-      delivery: 'Без доставки',
-      buttons: [
-        {
-          text: 'Оформити замовлення',
-          link: 'https://www.youtube.com/',
-          isSuccess: true,
-        },
-        {
-          text: 'Оформити кредит',
-          link: 'https://www.youtube.com/',
-          isOutline: true,
-        },
-      ],
-    },
-
-    goodsOtherBlock: {
-      title: 'See other products',
-      cards: [
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'iPhone 13',
-          description:
-            'The latest iPhone model features a new A15 Bionic chip, improved camera system, and longer battery life.',
-          isHot: false,
-          isNew: false,
-        },
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'MacBook Pro',
-          description:
-            "Apple's high-end laptop features a 16-inch Retina display, powerful M1 Pro or M1 Max chip, and up to 64GB of RAM.",
-          isHot: true,
-          isNew: false,
-        },
-        {
-          image: 'https://picsum.photos/400/200',
-          title: 'AirPods Pro',
-          description:
-            "Apple's premium wireless earbuds feature active noise cancellation, a customizable fit, and up to 4.5 hours of listening time.",
-          isHot: false,
-          isNew: true,
-        },
-      ],
-    },
-
-    subscribe: {
-      header: 'Unlock Premium Content',
-      description:
-        'Subscribe to access exclusive content and features.',
-      buttons: [
-        {
-          text: 'Register Now',
-          link: 'https://www.youtube.com/',
-        },
-        {
-          text: 'Buy Subscription',
-
-      socialMedia: [
-        {
-          name: 'Facebook',
-          link: 'https://www.facebook.com/',
-        },
-        {
-          name: 'Twitter',
-          link: 'https://twitter.com/',
-        },
-        {
-          name: 'Instagram',
-          link: 'https://www.instagram.com/',
-        },
-      ],
-      partners: [
-        {
-          name: 'Acme Inc.',
-          link: 'https://www.acme.com/',
-        },
-        {
-          name: 'Globex Corporation',
-          link: 'https://www.globex.com/',
-        },
-        {
-          name: 'Stark Industries',
-          link: 'https://www.starkindustries.com/',
-
-        },
-      ],
-    },
-  })
-  //                  ↑↑ сюди вводимо JSON дані
-})
-
     },
     formBlock: {
       header: 'Відгуки покупців про Ноут',
@@ -1999,7 +2231,6 @@ router.get('/shopreview', function (req, res) {
         },
       },
     },
-
 
     reviewList: [
       {
@@ -2098,7 +2329,6 @@ router.get('/shopreview', function (req, res) {
       buttons: [
         {
           text: 'Show More',
-
           link: 'https://www.youtube.com/',
         },
       ],
@@ -2196,7 +2426,6 @@ router.get('/shopreview', function (req, res) {
         },
       ],
     ],
-
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
