@@ -59,6 +59,8 @@ router.get('/', function (req, res) {
         {text:'work', link: '/work'},
         {text:'program', link: '/program'},
         {text:'web', link: '/web'},
+        {text:'shoporder', link: '/shoporder'},
+        {text:'web', link: '/web'},
       ],
     }
   })
